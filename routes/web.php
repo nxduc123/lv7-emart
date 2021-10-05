@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BannerController;
+use App\Models\Banner;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Admin Dashboard
+
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
     Route::get('/',[\App\Http\Controllers\AdminController::class,'admin'])->name('admin');
+
+    //banner section
+    Route::resource('/banner','BannerController');
+
 });

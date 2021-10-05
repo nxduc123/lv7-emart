@@ -46,11 +46,32 @@
         </li>
         <li class="nav-item">
           <a href="pages/widgets.html" class="nav-link">
-            <i class="nav-icon fas fa-bullhorn"></i>
+            <i class="nav-icon fas fa-bullhorn "></i>
             <p>
               Banner
+              <i class="right fas fa-angle-left"></i>
             </p>
           </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{route('banner.index')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  All Banner
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <a href="{{route('banner.create')}}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  Add Banner
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+           
+            </li>
+
+          </ul>
         </li>
         <li class="nav-item">
           <a href="pages/widgets.html" class="nav-link">
