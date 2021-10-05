@@ -27,7 +27,7 @@
       <form method="POST" action="{{ route('login') }}">
       @csrf
         <div class="input-group mb-3">
-          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -39,6 +39,9 @@
             </div>
           </div>
         </div>
+
+        
+
         <div class="input-group mb-3">
           <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
                                  @error('password')
@@ -63,8 +66,8 @@
         </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-            
+            <button type="submit" class="btn btn-primary btn-block">{{ __('Login') }} </button>
+  
           </div>
           <!-- /.col -->
         </div>
